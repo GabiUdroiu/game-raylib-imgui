@@ -22,6 +22,7 @@ endif()
 add_executable(raygame ${ALL_SOURCES})
 
 target_include_directories(raygame PRIVATE 
+    src
     external/imgui 
     external/rlimgui 
     external/rlimgui/extras
