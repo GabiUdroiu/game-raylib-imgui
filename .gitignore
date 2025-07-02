@@ -1,0 +1,17 @@
+# Build directories
+build-debug/
+build-release/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# IDE/Editor
+.vscode/
+
+# Executables and logs
+*.exe
+*.log
+
+# Local files (not for GitHub)
+README-local.md
+score_data.txt
