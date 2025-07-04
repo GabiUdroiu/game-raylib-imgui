@@ -23,6 +23,10 @@ void Game::Init() {
     SetTargetFPS(1000);
     SetExitKey(KEY_NULL);
     
+    float enemySpawnTimer = 0.0f;
+    float spawnInterval;
+    int entityAmount = 5;
+
     #ifndef RELEASE_BUILD
     InitDebugUI();
     #endif

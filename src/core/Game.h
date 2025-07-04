@@ -1,8 +1,11 @@
 #pragma once
 #include "GameState.h"
 #include "entities/Player.h"
+#include "entities/Enemy.h"
 #include "world/Map.h"
 #include "ui/play/PlayUI.h"
+
+#include <vector>
 
 class Game {
 public:
@@ -19,7 +22,10 @@ private:
     Player player;
     Map map;
     PlayUI playUI;
-
+    std::vector<Enemy*> enemies;
+    float enemySpawnTimer = 0.0f;
+    float enemySpawnInterval = 2.0f;
+    
     bool isRunning;
 
     void UpdateLoad(float deltaTime);

@@ -6,6 +6,11 @@ void Game::UpdateMenu(float deltaTime) {
         player.LoadAssets();
         map.LoadAssets();
         player.SetPosition({400.0f, 300.0f});
+        Enemy::LoadAssets();
+        for (Enemy* e : enemies) {
+            delete e;
+        }
+        enemies.clear();
         state = GameState::Play; // Transition to Play state
     } else if (IsKeyPressed(KEY_ESCAPE)) {
         state = GameState::Exit; // Exit the game

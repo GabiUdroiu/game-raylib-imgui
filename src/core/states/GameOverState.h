@@ -3,6 +3,10 @@
 
 void Game::UpdateGameOver(float deltaTime) {
     player.UnloadAssets();
+    for (Enemy* e : enemies) {
+        delete e;
+    }
+    enemies.clear();
     map.Unload();
     if (IsKeyPressed(KEY_ENTER)) {
         state = GameState::Menu; // Return to Menu

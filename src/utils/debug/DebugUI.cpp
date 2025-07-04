@@ -16,6 +16,7 @@ void ShutdownDebugUI() {
 
 void DrawDebugUI(GameState currentState, Player& player, Map& map) {
     rlImGuiBegin();
+    ImGui::GetIO().IniFilename = NULL; // avoid creating saving positions for the debug ui(creates a file)
     ImGui::Begin("Debug Info");
     ImGui::Text("Current GameState: %d", int(currentState));
     ImGui::Checkbox("Player Debug", &player.debug);

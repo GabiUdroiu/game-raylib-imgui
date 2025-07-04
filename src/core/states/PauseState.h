@@ -6,6 +6,8 @@ void Game::UpdatePause(float deltaTime) {
         state = GameState::Play; // Resume game
     } else if (IsKeyPressed(KEY_ESCAPE)) {
         player.UnloadAssets();
+        enemies.clear();
+        Enemy::UnloadAssets();
         map.Unload();
         state = GameState::Menu; // Return to Menu
     }
