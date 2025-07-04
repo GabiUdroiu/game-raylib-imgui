@@ -1,5 +1,8 @@
+#pragma once
 #include "GameState.h"
-//#include "../ui/UiManager.h"
+#include "entities/Player.h"
+#include "world/Map.h"
+#include "ui/play/PlayUI.h"
 
 class Game {
 public:
@@ -13,6 +16,23 @@ public:
 
 private:
     GameState state;
-    //UiManager uiManager;
+    Player player;
+    Map map;
+    PlayUI playUI;
+
     bool isRunning;
+
+    void UpdateLoad(float deltaTime);
+    void UpdateMenu(float deltaTime);
+    void UpdatePlay(float deltaTime);
+    void UpdatePause(float deltaTime);
+    void UpdateGameOver(float deltaTime);
+    void UpdateExit(float deltaTime);
+
+    void DrawLoad();
+    void DrawMenu();
+    void DrawPlay();
+    void DrawPause();
+    void DrawGameOver();
+    void DrawExit();
 };
