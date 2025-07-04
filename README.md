@@ -1,7 +1,6 @@
+# raygame
 
 ![Description](assets/desc.png)
-
-# raygame
 
 A simple Raylib C++ project built with CMake, vcpkg, and Ninja.
 
