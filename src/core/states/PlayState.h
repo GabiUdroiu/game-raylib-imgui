@@ -1,7 +1,7 @@
 #pragma once
 #include "raylib.h"
 
-#include "ui/play/PlayUI.h"
+#include "ui/play/Play.h"
 
 void Game::UpdatePlay(float deltaTime) {
     player.Update(deltaTime);

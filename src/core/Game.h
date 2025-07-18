@@ -3,7 +3,7 @@
 #include "entities/Player.h"
 #include "entities/Enemy.h"
 #include "world/Map.h"
-#include "ui/play/PlayUI.h"
+#include "ui/play/Play.h"
 
 #include <vector>
 
