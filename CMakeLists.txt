@@ -28,7 +28,7 @@ target_include_directories(raygame PRIVATE
     external/rlimgui/extras
 )
 
-if(CMAKE_BUILD_TYPE STREQUAL "Release")
+if(WIN32 AND CMAKE_BUILD_TYPE STREQUAL "Release")
     set_target_properties(raygame PROPERTIES WIN32_EXECUTABLE TRUE)  # Hide console on Windows
 endif()
 
